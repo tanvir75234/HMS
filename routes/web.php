@@ -34,7 +34,7 @@ Route::get('dashboard/user/view/{id}',[UserController::class,'view'])->name('use
 Route::get('dashboard/user/edit/{id}',[UserController::class,'edit'])->name('user.edit');
 Route::post('dashboard/user/submit',[UserController::class,'insert'])->name('user.submit');
 Route::post('dashboard/user/update',[UserController::class,'update'])->name('user.update');
-Route::post('dashboard/user/softdelete{id}',[UserController::class,'softdelete'])->name('user.softdelete');
+Route::get('dashboard/user/softdelete/{id}',[UserController::class,'softdelete'])->name('user.softdelete');
 
 Route::get('dashboard/doctor',[DoctorController::class,'index'])->name('doctor.home');
 Route::get('dashboard/doctor/add',[DoctorController::class,'add'])->name('doctor.add');
@@ -42,6 +42,7 @@ Route::post('dashboard/doctor/submit',[DoctorController::class,'insert'])->name(
 Route::get('dashboard/doctor/view/{id}',[DoctorController::class,'view'])->name('doctor.view');
 Route::get('dashboard/doctor/edit/{id}',[DoctorController::class,'edit'])->name('doctor.edit');
 Route::post('dashboard/doctor/update',[DoctorController::class,'update'])->name('doctor.update');
+Route::get('dashboard/doctor/softdelete/{id}',[DoctorController::class,'softdelete'])->name('doctor.softdelete');
 
 
 Route::get('/dashboard/department',[DepartmentController::class,'index'])->name('department.home');
@@ -50,6 +51,7 @@ Route::post('/dashboard/department/submit',[DepartmentController::class,'insert'
 Route::get('dashboard/department/view/{id}',[DepartmentController::class,'view'])->name('department.view');
 Route::get('dashboard/department/edit/{id}',[DepartmentController::class,'edit'])->name('department.edit');
 Route::post('dashboard/department/update',[DepartmentController::class,'update'])->name('department.update');
+Route::get('dashboard/department/softdelete/{id}',[DepartmentController::class,'softdelete'])->name('department.softdelete');
 
 Route::get('/dashboard/staff',[StaffController::class,'index'])->name('staff.home');
 Route::get('/dashboard/staff/add',[StaffController::class,'add'])->name('staff.add');
@@ -57,6 +59,7 @@ Route::post('/dashboard/staff/submit',[StaffController::class,'insert'])->name('
 Route::get('dashboard/staff/view/{id}',[StaffController::class,'view'])->name('staff.view');
 Route::get('dashboard/staff/edit/{id}',[StaffController::class,'edit'])->name('staff.edit');
 Route::post('dashboard/staff/update',[StaffController::class,'update'])->name('staff.update');
+Route::get('dashboard/staff/softdelete/{id}',[StaffController::class,'softdelete'])->name('staff.softdelete');
 
 Route::get('/dashboard/chamber',[ChamberController::class,'index'])->name('chamber.home');
 Route::get('/dashboard/chamber/add',[ChamberController::class,'add'])->name('chamber.add');
@@ -64,5 +67,6 @@ Route::post('/dashboard/chamber/submit',[ChamberController::class,'insert'])->na
 Route::get('dashboard/chamber/view/{id}',[ChamberController::class,'view'])->name('chamber.view');
 Route::get('dashboard/chamber/edit/{id}',[ChamberController::class,'edit'])->name('chamber.edit');
 Route::post('dashboard/chamber/update',[ChamberController::class,'update'])->name('chamber.update');
+Route::get('dashboard/chamber/softdelete/{id}',[ChamberController::class,'softdelete'])->name('chamber.softdelete');
 
 require __DIR__.'/auth.php';

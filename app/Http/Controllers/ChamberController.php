@@ -49,4 +49,10 @@ class ChamberController extends Controller{
             return redirect('dashboard/chamber');
         }
     }
+
+    public function softdelete($id){
+        $data = Chamber::find($id);
+        $data->delete();
+        return redirect('dashboard/chamber');
+    }
 }

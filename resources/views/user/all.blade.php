@@ -39,7 +39,11 @@
                         <ul class="dropdown-menu">
                           <li><a class="dropdown-item" href="{{ url('dashboard/user/view/'.$data->id) }}">View</a></li>
                           <li><a class="dropdown-item" href="{{ url('dashboard/user/edit/'.$data->id) }}">Edit</a></li>
-                          <li><a class="dropdown-item" href="#">Delete</a></li>
+                          <form method="get" action="{{ url('dashboard/user/softdelete') }}" >
+                              @csrf
+                              
+                             <li><a class="dropdown-item" href="{{ url('dashboard/user/softdelete/'.$data->id) }}">Delete</a></li> 
+                          </form>
                         </ul>
                       </div>
                   </td>
@@ -60,4 +64,5 @@
   </div>
 
   <!-- DELETE MODAL CODE -->
+
 @endsection

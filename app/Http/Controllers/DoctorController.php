@@ -56,8 +56,11 @@ class DoctorController extends Controller{
         }
     }
 
-    public function softdelete(){
-        $id = $_POST['modal_id'];
+
+    public function softdelete($id){
+        $data = Doctors::find($id);
+        $data->delete();
+        return redirect('dashboard/doctor');
     }
 
 }

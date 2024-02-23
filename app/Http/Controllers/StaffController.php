@@ -53,4 +53,10 @@ class StaffController extends Controller{
             return redirect('dashboard/staff');
         }
     }
+
+    public function softdelete($id){
+        $data = Staff::find($id);
+        $data->delete();
+        return redirect('dashboard/staff');
+    }
 }

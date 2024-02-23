@@ -3,5 +3,4 @@ $(document).ready(function(){
         var deleteID = $(this).data('id');
         $(".modal_body #modal_id").val(deleteID); 
     });
-
 }); 

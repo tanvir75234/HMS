@@ -18,7 +18,7 @@ class UserController extends Controller{
     }
 
     public function view($id){
-        $data = UserList::where('id',$id)->first();
+        $data = UserList::where('user_status',1)->where('id',$id)->first();
         return view('user.view',compact('data'));
     }
 
@@ -54,4 +54,11 @@ class UserController extends Controller{
             return redirect('dashboard/user');
         }
     }
+
+    public function softdelete($id){
+        $data = UserList::find($id);
+        $data->delete();
+        return redirect('dashboard/user');
+    }
+    
 }

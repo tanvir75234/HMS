@@ -50,5 +50,11 @@ class DepartmentController extends Controller{
         }
     }
 
+    public function softdelete($id){
+        $data = Department::find($id);
+        $data->delete();
+        return redirect('dashboard/department');
+    }
+
     
 }
