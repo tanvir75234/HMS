@@ -44,6 +44,7 @@
                         <ul>
                             <li><a href="{{ route('home') }}"><i class="fas fa-home"></i> Dashboard</a></li>
                             <li><a href="{{ route('user.home') }}"><i class="fas fa-user-circle"></i> Users</a></li>
+                            <li><a href="{{ route('pharmacy.home') }}"><i class="fas fa-prescription-bottle"></i> Pharmacy</a></li>
                             <li><a href="#"><i class="fas fa-users"></i> Manage Doctors</a>
                                 <ul>
                                     <li>

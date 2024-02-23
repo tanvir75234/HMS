@@ -8,6 +8,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\StaffController;
+use App\Http\Controllers\PharmacyController;
 
 
 /*
@@ -61,12 +62,20 @@ Route::get('dashboard/staff/edit/{id}',[StaffController::class,'edit'])->name('s
 Route::post('dashboard/staff/update',[StaffController::class,'update'])->name('staff.update');
 Route::get('dashboard/staff/softdelete/{id}',[StaffController::class,'softdelete'])->name('staff.softdelete');
 
-Route::get('/dashboard/chamber',[ChamberController::class,'index'])->name('chamber.home');
-Route::get('/dashboard/chamber/add',[ChamberController::class,'add'])->name('chamber.add');
-Route::post('/dashboard/chamber/submit',[ChamberController::class,'insert'])->name('chamber.submit');
+Route::get('dashboard/chamber',[ChamberController::class,'index'])->name('chamber.home');
+Route::get('dashboard/chamber/add',[ChamberController::class,'add'])->name('chamber.add');
+Route::post('dashboard/chamber/submit',[ChamberController::class,'insert'])->name('chamber.submit');
 Route::get('dashboard/chamber/view/{id}',[ChamberController::class,'view'])->name('chamber.view');
 Route::get('dashboard/chamber/edit/{id}',[ChamberController::class,'edit'])->name('chamber.edit');
 Route::post('dashboard/chamber/update',[ChamberController::class,'update'])->name('chamber.update');
 Route::get('dashboard/chamber/softdelete/{id}',[ChamberController::class,'softdelete'])->name('chamber.softdelete');
+
+Route::get('dashboard/pharmacy',[PharmacyController::class,'index'])->name('pharmacy.home');
+Route::get('dashboard/pharmacy/add',[PharmacyController::class,'add'])->name('pharmacy.add');
+Route::post('dashboard/pharmacy/submit',[PharmacyController::class,'insert'])->name('pharmacy.submit');
+Route::get('dashboard/pharmacy/view/{id}',[PharmacyController::class,'view'])->name('pharmacy.view');
+Route::get('dashboard/pharmacy/edit/{id}',[PharmacyController::class,'edit'])->name('pharmacy.edit');
+Route::post('dashboard/pharmacy/update',[PharmacyController::class,'update'])->name('pharmacy.update');
+Route::get('dashboard/pharmacy/softdelete/{id}',[PharmacyController::class,'softdelete'])->name('pharmacy.softdelete');
 
 require __DIR__.'/auth.php';
