@@ -6,10 +6,10 @@
           <div class="card-header">
             <div class="row">
                 <div class="col-md-8 card_title_part">
-                    <i class="fab fa-gg-circle"></i>All User List
+                    <i class="fab fa-gg-circle"></i>All Staff List
                 </div>  
                 <div class="col-md-4 card_button_part">
-                    <a href="{{ route('user.add') }}" class="btn btn-sm btn-dark"><i class="fas fa-plus-circle"></i>Add User</a>
+                    <a href="{{ route('staff.add') }}" class="btn btn-sm btn-dark"><i class="fas fa-plus-circle"></i>Add Staff</a>
                 </div>  
             </div>
           </div>
@@ -18,9 +18,10 @@
               <thead class="table-dark">
                 <tr>
                   <th>SN</th>
-                  <th>Name</th>
+                  <th>Staff Name</th>
                   <th>Phone</th>
                   <th>Email</th>
+                  <th>Author</th>
                   <th>Photo</th>
                   <th>Manage</th>
                 </tr>
@@ -29,16 +30,17 @@
                 @foreach ( $data as $data )          
                 <tr>
                   <td>{{ $data->id }}</td>
-                  <td>{{ $data->name }}</td>
-                  <td>{{ $data->phone }}</td>
-                  <td>{{ $data->email }}</td>
-                  <td>{{ $data->photo }}</td>
+                  <td>{{ $data->staff_name }}</td>
+                  <td>{{ $data->staff_phone }}</td>
+                  <td>{{ $data->staff_email }}</td>
+                  <td>{{ $data->staff_author }}</td>
+                  <td>{{ $data->staff_photo }}</td>
                   <td>
                       <div class="btn-group btn_group_manage" role="group">
                         <button type="button" class="btn btn-sm btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Manage</button>
                         <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="{{ url('dashboard/user/view/'.$data->id) }}">View</a></li>
-                          <li><a class="dropdown-item" href="{{ url('dashboard/user/edit/'.$data->id) }}">Edit</a></li>
+                          <li><a class="dropdown-item" href="{{ url('dashboard/staff/view/'.$data->id) }}">View</a></li>
+                          <li><a class="dropdown-item" href="{{ url('dashboard/staff/edit/'.$data->id) }}">Edit</a></li>
                           <li><a class="dropdown-item" href="#">Delete</a></li>
                         </ul>
                       </div>
@@ -59,5 +61,4 @@
     </div>
   </div>
 
-  <!-- DELETE MODAL CODE -->
 @endsection

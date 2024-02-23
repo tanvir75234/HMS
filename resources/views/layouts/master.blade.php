@@ -47,7 +47,10 @@
                             <li><a href="#"><i class="fas fa-users"></i> Manage Doctors</a>
                                 <ul>
                                     <li>
-                                        <a class="px-5" href="{{ route('doctor.home') }}"> <i class="fas fa-user-md"></i> Doctors</a>
+                                        <a class="px-5" href="{{ route('doctor.home') }}"> Doctors</a>
+                                        <a class="px-5" href="{{ route('department.home') }}"> Department </a>
+                                        <a class="px-5" href="{{ route('staff.home') }}"> Staff </a>
+                                        <a class="px-5" href="{{ route('chamber.home') }}"> Chamber </a>
                                     </li>
                                 </ul>
                             </li>

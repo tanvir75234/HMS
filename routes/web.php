@@ -1,12 +1,13 @@
 <?php
 
-
+use App\Http\Controllers\ChamberController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\DepartmentController;
+use App\Http\Controllers\StaffController;
 
 
 /*
@@ -49,4 +50,19 @@ Route::post('/dashboard/department/submit',[DepartmentController::class,'insert'
 Route::get('dashboard/department/view/{id}',[DepartmentController::class,'view'])->name('department.view');
 Route::get('dashboard/department/edit/{id}',[DepartmentController::class,'edit'])->name('department.edit');
 Route::post('dashboard/department/update',[DepartmentController::class,'update'])->name('department.update');
+
+Route::get('/dashboard/staff',[StaffController::class,'index'])->name('staff.home');
+Route::get('/dashboard/staff/add',[StaffController::class,'add'])->name('staff.add');
+Route::post('/dashboard/staff/submit',[StaffController::class,'insert'])->name('staff.submit');
+Route::get('dashboard/staff/view/{id}',[StaffController::class,'view'])->name('staff.view');
+Route::get('dashboard/staff/edit/{id}',[StaffController::class,'edit'])->name('staff.edit');
+Route::post('dashboard/staff/update',[StaffController::class,'update'])->name('staff.update');
+
+Route::get('/dashboard/chamber',[ChamberController::class,'index'])->name('chamber.home');
+Route::get('/dashboard/chamber/add',[ChamberController::class,'add'])->name('chamber.add');
+Route::post('/dashboard/chamber/submit',[ChamberController::class,'insert'])->name('chamber.submit');
+Route::get('dashboard/chamber/view/{id}',[ChamberController::class,'view'])->name('chamber.view');
+Route::get('dashboard/chamber/edit/{id}',[ChamberController::class,'edit'])->name('chamber.edit');
+Route::post('dashboard/chamber/update',[ChamberController::class,'update'])->name('chamber.update');
+
 require __DIR__.'/auth.php';
