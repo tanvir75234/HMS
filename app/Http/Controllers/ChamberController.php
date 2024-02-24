@@ -8,21 +8,21 @@ use App\Models\Chamber;
 class ChamberController extends Controller{
     public function index(){
         $data = Chamber::all();
-        return view('chamber.all',compact('data'));
+        return view('admin.chamber.all',compact('data'));
     }
 
     public function add(){
-        return view('chamber.add');
+        return view('admin.chamber.add');
     }
 
     public function view($id){
         $data = Chamber::where('id',$id)->first();
-        return view('chamber.view',compact('data'));
+        return view('admin.chamber.view',compact('data'));
     }
 
     public function edit($id){
         $data = Chamber::where('id',$id)->firstOrFail();
-        return view('chamber.edit',compact('data'));
+        return view('admin.chamber.edit',compact('data'));
     }
 
     public function insert(Request $request){

@@ -33,8 +33,8 @@ class PharmacyController extends Controller{
             'doctor_name' => $request['doctor_name'],
             'amount' => $request['amount'],
             'discount' => $request['discount'],
-            'paid_ammount' => $request['paid_ammount'],
-            'due_ammount' => $request['due_ammout'],
+            'paid_amount' => $request['paid_amount'],
+            'due_amount' => $request['due_amount'],
             'prescription_photo' => $request['prescription_photo'],
         ]);
 
@@ -52,8 +52,8 @@ class PharmacyController extends Controller{
             'doctor_name' => $request['doctor_name'],
             'amount' => $request['amount'],
             'discount' => $request['discount'],
-            'paid_ammount' => $request['paid_ammount'],
-            'due_ammount' => $request['due_ammout'],
+            'paid_amount' => $request['paid_amount'],
+            'due_amount' => $request['due_amount'],
             'prescription_photo' => $request['prescription_photo'],
         ]);
 

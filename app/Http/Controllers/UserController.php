@@ -10,16 +10,16 @@ class UserController extends Controller{
 
     public function index(){
         $data = UserList::all();
-        return view ('user.all',compact('data'));
+        return view ('admin.user.all',compact('data'));
     }
 
     public function add(){
-        return view ('user.add');
+        return view ('admin.user.add');
     }
 
     public function view($id){
         $data = UserList::where('user_status',1)->where('id',$id)->first();
-        return view('user.view',compact('data'));
+        return view('admin.user.view',compact('data'));
     }
 
     public function insert(REQUEST $request ) {
@@ -37,7 +37,7 @@ class UserController extends Controller{
 
    public function edit($id){
         $data = UserList::where('id',$id)->firstOrFail();
-        return view('user.edit',compact('data'));
+        return view('admin.user.edit',compact('data'));
    }
 
     public function update(Request $request){

@@ -18,8 +18,8 @@ return new class extends Migration
             $table->string('doctor_name')->nullable();
             $table->string('amount')->nullable();
             $table->string('discount')->nullable();
-            $table->string('paid_ammount')->nullable();
-            $table->string('due_ammount')->nullable();
+            $table->string('paid_amount')->nullable();
+            $table->string('due_amount')->nullable();
             $table->string('prescription_photo')->nullable();
             $table->string('pharamcy_status')->nullable();
             $table->timestamps();

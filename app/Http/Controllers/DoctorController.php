@@ -9,21 +9,21 @@ class DoctorController extends Controller{
 
     public function index(){
         $data = Doctors::all();
-        return view('doctors.all',compact('data'));
+        return view('admin.doctors.all',compact('data'));
     }
 
     public function add(){
-        return view('doctors.add');
+        return view('admin.doctors.add');
     }
 
     public function view($id){
         $data = Doctors::where('id',$id)->first();
-        return view('doctors.view',compact('data'));
+        return view('admin.doctors.view',compact('data'));
     }
 
     public function edit($id){
         $data = Doctors::where('id',$id)->firstOrFail();
-        return view('doctors.edit',compact('data'));
+        return view('admin.doctors.edit',compact('data'));
     }
 
     public function insert(Request $request){

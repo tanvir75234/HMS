@@ -51,12 +51,12 @@
                           <tr>
                             <td>Paid Ammount</td>  
                             <td>:</td>  
-                            <td>{{ $data->paid_ammount }}</td>  
+                            <td>{{ $data->paid_amount }}</td>  
                           </tr>
                           <tr>
                             <td>Due Amount</td>  
                             <td>:</td>  
-                            <td>{{ $data->due_ammount }}</td>  
+                            <td>{{ $data->due_amount }}</td>  
                           </tr>
 
                         </table>

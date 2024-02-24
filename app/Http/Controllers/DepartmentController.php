@@ -9,21 +9,21 @@ class DepartmentController extends Controller{
 
     public function index(){
         $data = Department::all();
-        return view ('department.all',compact('data'));
+        return view ('admin.department.all',compact('data'));
     }
 
     public function add(){
-        return view ('department.add');
+        return view ('admin.department.add');
     }
 
     public function view($id){
         $data = Department::where('id',$id)->first();
-        return view('department.view',compact('data'));
+        return view('admin.department.view',compact('data'));
     }
 
     public function edit($id){
         $data = Department::where('id',$id)->firstOrFail();
-        return view('department.edit',compact('data'));
+        return view('admin.department.edit',compact('data'));
     }
 
     public function insert(Request $_request){
