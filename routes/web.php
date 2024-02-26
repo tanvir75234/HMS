@@ -15,7 +15,7 @@ use App\Http\Controllers\StaffController;
 use App\Http\Controllers\PharmacyController;
 use App\Http\Controllers\SocialController;
 
-Route::get('/',[FrontendController::class,'index']); 
+Route::get('/',[FrontendController::class,'index'])->name('front.home'); 
 Route::get('/about',[FrontendController::class,'about'])->name('front.about'); 
 Route::get('/blog',[FrontendController::class,'blog'])->name('front.blog'); 
 Route::get('/expert',[FrontendController::class,'expert'])->name('front.expert'); 

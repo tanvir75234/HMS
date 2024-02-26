@@ -8,8 +8,7 @@ use App\Models\Footer;
 class FrontendController extends Controller
 {
     public function index(){
-        $footer = Footer::where('footer_id',1)->first();
-        return view('frontend.home',compact('footer'));
+        return view('frontend.home');
     }
 
     public function about(){

@@ -7,8 +7,8 @@ use Illuminate\Http\Request;
 
 class FooterController extends Controller{
     public function edit(){
-        $data = Footer::where('footer_id',1)->first();
-        return view('admin.footer.edit',compact('data'));
+        $footer = Footer::where('footer_id',1)->first();
+        return view('admin.footer.edit',compact('footer'));
     }
 
     public function update(Request $request){

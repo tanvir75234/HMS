@@ -29,8 +29,7 @@
                         <ul>
                             <li><a href=""><i class="fa-solid fa-envelope"></i> support@hospital.com</a> | </li>
                             <li><a href=""><i class="fa-solid fa-phone"></i> 01738875234</a> | </li>
-                            <li><a href=""><i class="fa-solid fa-lock"></i> Login</a> / <a
-                                    href="">Register</a> </li>
+                            <li><a href=""><i class="fa-solid fa-lock"></i> Login</a> / <a href="">Register</a> </li>
                         </ul>
                     </div>
                 </div>
@@ -111,17 +110,16 @@
                 <div class="col-md-3">
                     <div class="about_us">
                         <h3 class="text-light mt-5 mb-4 pb-3">About Us</h3>
-                        <p class="text-light fw-normal lh-base">{{$footer->about_us}}</p>
+                        <p class="text-light fw-normal lh-base">Tanvir General Hospital is number one hospital in the world <br> Come and be safe</p>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="about_us">
                         <h3 class="text-light  mt-5 mb-4 pb-3">Quick Links</h3>
                         <ul>
-                            <li><a class="text-light" href=""> Home </a></li>
-                            <li><a class="text-light" href=""> Pricing plan </a></li>
-                            <li><a class="text-light" href=""> Blog </a></li>
-                            <li><a class="text-light" href=""> service </a></li>
+                            <li><a class="text-light" href="{{ route('front.home')}}"> Home </a></li>
+                            <li><a class="text-light" href="{{ route('front.blog') }}"> Blog </a></li>
+                            <li><a class="text-light" href="{{ route('front.service') }}"> service </a></li>
                         </ul>
                     </div>
                 </div>
@@ -129,22 +127,23 @@
                     <div class="about_us">
                         <h3 class="text-light  mt-5 mb-4 pb-3">Importants Links</h3>
                         <ul>
-                            <li><a class="text-light" href=""> About us </a></li>
-                            <li><a class="text-light" href=""> Terms and Condition </a></li>
-                            <li><a class="text-light" href=""> Privacy & Policy </a></li>
+                            <li><a class="text-light" href="{{ route('front.about') }}"> About us </a></li>
+                            <li><a class="text-light" href="#"> Terms and Condition </a></li>
+                            <li><a class="text-light" href="#"> Privacy & Policy </a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="about_us">
                         <h3 class="text-light fw-bold mt-5 mb-4 pb-3">Contact Us</h3>
-                    </div>
+                 </div>
                     <h6 class="text-light mb-2">Address:</h6>
-                    <p class="text-light mb-4">San Francisco City Hall, San Francisco, San Francisco City Hall CA</p>
+                    <p class="text-light mb-4"></p>
                     <h6 class="text-light mb-2">Phone:</h6>
-                    <p class="text-light mb-4">125-965-7854</p>
+                    <p class="text-light mb-4"></p>
                     <h6 class="text-light mb-2">Email:</h6>
-                    <p class="text-light mb-4">support@websolutionus.com</p>
+                    <p class="text-light mb-4"></p>
+  
                 </div>
             </div>
         </div>
