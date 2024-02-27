@@ -19,37 +19,37 @@
                 <div class="row mb-3">
                   <label class="col-sm-3 col-form-label col_form_label">Email<span class="req_star">*</span>:</label>
                   <div class="col-sm-7">
-                    <input type="hidden" name="footer_id" value="{{ $data->footer_id }}">
-                    <input type="email" class="form-control form_control" id="" name="email" value="{{ $data->email }}">
+                    <input type="hidden" name="footer_id" value="{{ $footer->footer_id }}">
+                    <input type="email" class="form-control form_control" id="" name="email" value="{{ $footer->email }}">
                   </div>
                 </div>
                 <div class="row mb-3">
                   <label class="col-sm-3 col-form-label col_form_label">Phone:</label>
                   <div class="col-sm-7">
-                    <input type="text" class="form-control form_control" id="" name="phone" value="{{ $data->phone }}">
+                    <input type="text" class="form-control form_control" id="" name="phone" value="{{ $footer->phone }}">
                   </div>
                 </div>
                 <div class="row mb-3">
                   <label class="col-sm-3 col-form-label col_form_label">Address<span class="req_star">*</span>:</label>
                   <div class="col-sm-7">
-                    <input type="text" class="form-control form_control" id="" name="address" value="{{ $data->address }}">
+                    <input type="text" class="form-control form_control" id="" name="address" value="{{ $footer->address }}">
                   </div>
                 </div>
                 <div class="row mb-3">
                   <label class="col-sm-3 col-form-label col_form_label">Copyrights<span class="req_star">*</span>:</label>
                   <div class="col-sm-7">
-                    <input type="text" class="form-control form_control" id="" name="copyrights" value="{{ $data->copyrights }}">
+                    <input type="text" class="form-control form_control" id="" name="copyrights" value="{{ $footer->copyrights }}">
                   </div>
                 </div> 
                 <div class="row mb-3">
                   <label class="col-sm-3 col-form-label col_form_label">About Us<span class="req_star">*</span>:</label>
                   <div class="col-sm-7">
-                    <input type="text" class="form-control form_control" id="" name="about_us" value="{{ $data->about_us }}">
+                    <input type="text" class="form-control form_control" id="" name="about_us" value="{{ $footer->about_us }}">
                   </div>
                 </div>
             </div>
             <div class="card-footer text-center">
-              <button type="submit" class="btn btn-sm btn-dark">REGISTRATION</button>
+              <button type="submit" class="btn btn-sm btn-dark">SUBMIT</button>
             </div>  
           </div>
       </form>

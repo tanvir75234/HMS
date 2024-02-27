@@ -52,8 +52,9 @@
                             <li><a href="{{ route('user.home') }}"><i class="fas fa-user-circle"></i> Users</a></li>
                             <li><a href="{{ route('user.home') }}"><i class="fas fa-user-circle"></i> Manage Website</a>
                                 <ul>
-                                    <li><a class="px-5" href="">Footer</a></li>
-                                    <li><a class="px-5" href="">Social Link</a></li>
+                                    <li><a class="px-5" href="{{ route('topbar') }}">Topbar Part</a></li>
+                                    <li><a class="px-5" href="{{ route('social') }}">Social Link</a></li>
+                                    <li><a class="px-5" href="{{ url ('admin/dashboard/footer') }}">Footer</a></li>
                                 </ul>
                             </li>
                             <li><a href="{{ route('pharmacy.home') }}"><i class="fas fa-prescription-bottle"></i>
