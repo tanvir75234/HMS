@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="{{ asset('contents/frontend') }}/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ asset('contents/frontend') }}/css/style.css">
 </head>
+@php
+    $footer = App\Models\Footer::where('footer_id',1)->first();
+    $social = App\Models\Social::where('social_id',1)->first();
+    $topbar = App\Models\Topbar::where('topbar_id',1)->first();
+@endphp
 
 <body>
     <div class="top-part">
@@ -17,18 +22,18 @@
                 <div class="col-md-6">
                     <div class="icon_bar">
                         <ul>
-                            <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
-                            <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
-                            <li><a href=""><i class="fa-brands fa-linkedin "></i></a></li>
-                            <li><a href=""><i class="fa-brands fa-whatsapp"></i></a></li>
+                            <li><a href="{{ $social->facebook }}"><i class="fa-brands fa-facebook"></i></a></li>
+                            <li><a href="{{ $social->instagram }}"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="{{ $social->linkedin }}"><i class="fa-brands fa-linkedin "></i></a></li>
+                            <li><a href="{{ $social->whatsapp }}"><i class="fa-brands fa-whatsapp"></i></a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="menu text-end">
                         <ul>
-                            <li><a href=""><i class="fa-solid fa-envelope"></i> support@hospital.com</a> | </li>
-                            <li><a href=""><i class="fa-solid fa-phone"></i> 01738875234</a> | </li>
+                            <li><a href=""><i class="fa-solid fa-envelope"></i> {{ $topbar->topbar_email }}</a> | </li>
+                            <li><a href=""><i class="fa-solid fa-phone"></i> {{ $topbar->topbar_phone }}</a> | </li>
                             <li><a href=""><i class="fa-solid fa-lock"></i> Login</a> / <a href="">Register</a> </li>
                         </ul>
                     </div>
@@ -49,7 +54,7 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            <a class="nav-link active" aria-current="page" href="{{ route('front.home') }}">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('front.about') }}">About Us</a>
@@ -110,7 +115,7 @@
                 <div class="col-md-3">
                     <div class="about_us">
                         <h3 class="text-light mt-5 mb-4 pb-3">About Us</h3>
-                        <p class="text-light fw-normal lh-base">Tanvir General Hospital is number one hospital in the world <br> Come and be safe</p>
+                        <p class="text-light fw-normal lh-base">{{ $footer->about_us }}<br> Come and be safe</p>
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -138,11 +143,11 @@
                         <h3 class="text-light fw-bold mt-5 mb-4 pb-3">Contact Us</h3>
                  </div>
                     <h6 class="text-light mb-2">Address:</h6>
-                    <p class="text-light mb-4"></p>
+                    <p class="text-light mb-4">{{ $footer->address }}</p>
                     <h6 class="text-light mb-2">Phone:</h6>
-                    <p class="text-light mb-4"></p>
+                    <p class="text-light mb-4">{{ $footer->phone }}</p>
                     <h6 class="text-light mb-2">Email:</h6>
-                    <p class="text-light mb-4"></p>
+                    <p class="text-light mb-4">{{ $footer->email }}</p>
   
                 </div>
             </div>

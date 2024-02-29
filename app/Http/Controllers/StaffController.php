@@ -9,21 +9,21 @@ class StaffController extends Controller{
 
     public function index(){
         $data = Staff::all();
-        return view('staff.all',compact('data'));
+        return view('admin.staff.all',compact('data'));
     }
 
     public function add(){
-        return view('staff.add');
+        return view('admin.staff.add');
     }
 
     public function view($id){
         $data = Staff::where('id',$id)->first();
-        return view('staff.view',compact('data'));
+        return view('admin.staff.view',compact('data'));
     }
 
     public function edit($id){
         $data = Staff::where('id',$id)->firstOrFail();
-        return view('staff.edit',compact('data'));
+        return view('admin.staff.edit',compact('data'));
     }
 
     public function insert(Request $request){

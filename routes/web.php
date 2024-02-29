@@ -10,10 +10,12 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\FooterController;
 use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\PatientController;
 use App\Http\Controllers\StaffController;
 use App\Http\Controllers\PharmacyController;
 use App\Http\Controllers\SocialController;
+use App\Http\Controllers\TopbarController;
 
 Route::get('/',[FrontendController::class,'index'])->name('front.home'); 
 Route::get('/about',[FrontendController::class,'about'])->name('front.about'); 
@@ -88,6 +90,10 @@ Route::middleware('auth','role:admin')->group(function(){
 
     Route::get('admin/dashboard/social',[SocialController::class,'edit'])->name('social');
     Route::post('admin/dashboard/social/update',[SocialController::class,'update'])->name('social.update');
+    
+    Route::get('admin/dashboard/topbar',[TopbarController::class,'edit'])->name('topbar');
+    Route::post('admin/dashboard/topbar/update',[TopbarController::class,'update'])->name('topbar.update'); 
+
 });
 
 Route::middleware('auth','role:doctor')->group(function(){
