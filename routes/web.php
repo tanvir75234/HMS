@@ -43,7 +43,7 @@ Route::middleware('auth','role:admin')->group(function(){
     Route::get('dashboard/doctor/softdelete/{id}',[DoctorController::class,'softdelete'])->name('doctor.softdelete');
     
     
-    Route::get('/dashboard/department',[DepartmentController::class,'index'])->name('department.home');
+    Route::get('/ ',[DepartmentController::class,'index'])->name('department.home');
     Route::get('/dashboard/department/add',[DepartmentController::class,'add'])->name('department.add');
     Route::post('/dashboard/department/submit',[DepartmentController::class,'insert'])->name('department.submit');
     Route::get('dashboard/department/view/{id}',[DepartmentController::class,'view'])->name('department.view');
