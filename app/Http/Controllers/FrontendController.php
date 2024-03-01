@@ -31,4 +31,12 @@ class FrontendController extends Controller
         return view('frontend.service');
     }
 
+    public function login_form(){
+        return view('frontend.login-form');   
+    }
+
+    public function registration(){
+        return view('frontend.register-form');
+    }
+
 }

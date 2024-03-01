@@ -1,11 +1,14 @@
 @extends('welcome')
 @section('frontend')
+@php
+    $service = App\Models\Service::where('service_id',1)->first();
+@endphp
     <section id="about-banner">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="about_content">
-                        <h3 class="fw-bold text-light">Our Service</h3>
+                        <h3 class="fw-bold text-light">{{$service->service_title}}</h3>
                         <p class="fw-medium text-light mt-5">Home | Our Service</p>
                     </div>
                 </div>

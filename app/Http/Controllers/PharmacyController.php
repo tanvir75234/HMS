@@ -9,21 +9,21 @@ class PharmacyController extends Controller{
 
     public function index(){
         $data = Pharmacy::all();
-        return view('pharmacy.all',compact('data'));
+        return view('admin.pharmacy.all',compact('data'));
     }
 
     public function add(){
-        return view('pharmacy.add');
+        return view('admin.pharmacy.add');
     }
 
     public function view($id){
         $data = Pharmacy::where('id',$id)->first();
-        return view('pharmacy.view',compact('data'));
+        return view('admin.pharmacy.view',compact('data'));
     }
 
     public function edit($id){
         $data = Pharmacy::where('id',$id)->firstOrFail();
-        return view('pharmacy.edit',compact('data'));
+        return view('admin.pharmacy.edit',compact('data'));
     }
 
     public function insert(Request $request){

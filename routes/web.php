@@ -16,6 +16,13 @@ use App\Http\Controllers\StaffController;
 use App\Http\Controllers\PharmacyController;
 use App\Http\Controllers\SocialController;
 use App\Http\Controllers\TopbarController;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\Popular_BlogController;
+use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\TestimonialController;
+
+
+
 
 Route::get('/',[FrontendController::class,'index'])->name('front.home'); 
 Route::get('/about',[FrontendController::class,'about'])->name('front.about'); 
@@ -23,6 +30,8 @@ Route::get('/blog',[FrontendController::class,'blog'])->name('front.blog');
 Route::get('/expert',[FrontendController::class,'expert'])->name('front.expert'); 
 Route::get('/service',[FrontendController::class,'service'])->name('front.service'); 
 Route::get('/contact',[FrontendController::class,'contact'])->name('front.contact'); 
+Route::get('/login_form',[FrontendController::class,'login_form'])->name('login.form'); 
+Route::get('/registration',[FrontendController::class,'registration'])->name('registration'); 
 
 Route::middleware('auth','role:admin')->group(function(){
 
@@ -45,7 +54,7 @@ Route::middleware('auth','role:admin')->group(function(){
     Route::get('dashboard/doctor/softdelete/{id}',[DoctorController::class,'softdelete'])->name('doctor.softdelete');
     
     
-    Route::get('/ ',[DepartmentController::class,'index'])->name('department.home');
+    Route::get('/dashboard/department',[DepartmentController::class,'index'])->name('department.home');
     Route::get('/dashboard/department/add',[DepartmentController::class,'add'])->name('department.add');
     Route::post('/dashboard/department/submit',[DepartmentController::class,'insert'])->name('department.submit');
     Route::get('dashboard/department/view/{id}',[DepartmentController::class,'view'])->name('department.view');
@@ -84,15 +93,41 @@ Route::middleware('auth','role:admin')->group(function(){
     Route::get('dashboard/appointment/edit/{id}',[AppointmentController::class,'edit'])->name('appointment.edit');
     Route::post('dashboard/appointment/update',[AppointmentController::class,'update'])->name('appointment.update');
     Route::get('dashboard/appointment/softdelete/{id}',[AppointmentController::class,'softdelete'])->name('appointment.softdelete');
-    
-    Route::get('admin/dashboard/footer',[FooterController::class,'edit']);
-    Route::post('admin/dashboard/footer/update',[FooterController::class,'update'])->name('footer.update');
+
+    Route::get('dashboard/blog',[BlogController::class,'index'])->name('blog.home');
+    Route::get('dashboard/blog/add',[BlogController::class,'add'])->name('blog.add');
+    Route::post('dashboard/blog/submit',[BlogController::class,'insert'])->name('blog.submit');
+    Route::get('dashboard/blog/view/{id}',[BlogController::class,'view'])->name('blog.view');
+    Route::get('dashboard/blog/edit/{id}',[BlogController::class,'edit'])->name('blog.edit');
+    Route::post('dashboard/blog/update',[BlogController::class,'update'])->name('blog.update');
+    Route::get('dashboard/blog/softdelete/{id}',[BlogController::class,'softdelete'])->name('blog.softdelete');
+
+    Route::get('dashboard/popular/blog',[Popular_BlogController::class,'index'])->name('popular-blog.home');
+    Route::get('dashboard/popular/blog/add',[Popular_BlogController::class,'add'])->name('popular-blog.add');
+    Route::post('dashboard/popular/blog/submit',[Popular_BlogController::class,'insert'])->name('popular-blog.submit');
+    Route::get('dashboard/popular/blog/view/{id}',[Popular_BlogController::class,'view'])->name('popular-blog.view');
+    Route::get('dashboard/popular/blog/edit/{id}',[Popular_BlogController::class,'edit'])->name('popular-blog.edit');
+    Route::post('dashboard/popular/blog/update',[Popular_BlogController::class,'update'])->name('popular-blog.update');
+    Route::get('dashboard/popular/blog/softdelete/{id}',[Popular_BlogController::class,'softdelete'])->name('popular-blog.softdelete');
+
+    Route::get('admin/dashboard/topbar',[TopbarController::class,'edit'])->name('topbar');
+    Route::post('admin/dashboard/topbar/update',[TopbarController::class,'update'])->name('topbar.update');
 
     Route::get('admin/dashboard/social',[SocialController::class,'edit'])->name('social');
     Route::post('admin/dashboard/social/update',[SocialController::class,'update'])->name('social.update');
     
-    Route::get('admin/dashboard/topbar',[TopbarController::class,'edit'])->name('topbar');
-    Route::post('admin/dashboard/topbar/update',[TopbarController::class,'update'])->name('topbar.update'); 
+    Route::get('admin/dashboard/service',[ServiceController::class,'edit'])->name('service');
+    Route::post('admin/dashboard/service/update',[ServiceController::class,'update'])->name('service.update');
+
+    Route::get('admin/dashboard/testimonial',[TestimonialController::class,'edit'])->name('testimonial');
+    Route::post('admin/dashboard/testimonial/update',[TestimonialController::class,'update'])->name('testimonial.update');
+
+    Route::get('admin/dashboard/footer',[FooterController::class,'edit']);
+    Route::post('admin/dashboard/footer/update',[FooterController::class,'update'])->name('footer.update');
+
+    
+    
+     
 
 });
 

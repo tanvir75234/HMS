@@ -127,9 +127,38 @@ body{
 	transition: all linear 0.5s; 
 }
 
+.menu ul li ul{
+    display: none;
+    transition: all linear.4s;
+}
+
+.menu ul li:hover ul{
+    display: block;
+    background-color: #252c34;
+    transition: all linear .4s;
+}
+
 .menu ul li:hover a{
     background-color: #4D6299;
+    transition: all linear .4s;
 }
+
+.menu ul li ul li a{
+    background-color: #252c34!important;
+}
+
+.menu ul li:hover ul li{
+    display: block;
+    background-color: #0a0a0a!important;
+    transition: all linear .4s;
+
+}
+
+.menu ul li ul li:hover a{
+    
+    color: #f5f5f5;
+    transition: all linear .4s;
+ }
 
 .menu ul li a i{
     margin-right: 5px;   
@@ -286,4 +315,11 @@ span.req_star{
 .img200{
     max-width: 300px;
     max-height: 200px;
+}
+
+/* LOGIN FORM CSS START */
+
+.submit{
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
 }

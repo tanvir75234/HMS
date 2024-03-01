@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="{{ asset('contents/frontend') }}/css/style.css">
 </head>
 @php
-    $footer = App\Models\Footer::where('footer_id',1)->first();
-    $social = App\Models\Social::where('social_id',1)->first();
     $topbar = App\Models\Topbar::where('topbar_id',1)->first();
+    $social = App\Models\Social::where('social_id',1)->first();
+    $footer = App\Models\Footer::where('footer_id',1)->first();
 @endphp
 
 <body>
@@ -34,7 +34,7 @@
                         <ul>
                             <li><a href=""><i class="fa-solid fa-envelope"></i> {{ $topbar->topbar_email }}</a> | </li>
                             <li><a href=""><i class="fa-solid fa-phone"></i> {{ $topbar->topbar_phone }}</a> | </li>
-                            <li><a href=""><i class="fa-solid fa-lock"></i> Login</a> / <a href="">Register</a> </li>
+                            <li><a href="{{ route('login.form') }}"><i class="fa-solid fa-lock"></i> Login</a> / <a href="{{ route('registration') }}">Register</a> </li>
                         </ul>
                     </div>
                 </div>
@@ -115,7 +115,7 @@
                 <div class="col-md-3">
                     <div class="about_us">
                         <h3 class="text-light mt-5 mb-4 pb-3">About Us</h3>
-                        <p class="text-light fw-normal lh-base">{{ $footer->about_us }}<br> Come and be safe</p>
+                        <p class="text-light fw-normal lh-base"> Come and be safe</p>
                     </div>
                 </div>
                 <div class="col-md-3">

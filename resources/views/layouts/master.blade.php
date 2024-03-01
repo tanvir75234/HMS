@@ -50,23 +50,31 @@
                         <ul>
                             <li><a href="{{ route('home') }}"><i class="fas fa-home"></i> Dashboard</a></li>
                             <li><a href="{{ route('user.home') }}"><i class="fas fa-user-circle"></i> Users</a></li>
+                            <li><a href="{{ route('blog.home') }}"><i class="fas fa-user-circle"></i> Blogs</a>
+                            <ul>
+                                <li><a class="px-5" href="blog.">Blog Category</a></li>
+                                <li><a class="px-5" href="blog.">Popular Blogs</a></li>
+                                <li><a class="px-5" href="blog.">Comments</a></li>
+                            </ul>
+                        </li>
+                            <li><a href="{{ route('pharmacy.home') }}"><i class="fas fa-prescription-bottle"></i> Pharmacy</a></li>
                             <li><a href="{{ route('user.home') }}"><i class="fas fa-user-circle"></i> Manage Website</a>
                                 <ul>
                                     <li><a class="px-5" href="{{ route('topbar') }}">Topbar Part</a></li>
                                     <li><a class="px-5" href="{{ route('social') }}">Social Link</a></li>
+                                    <li><a class="px-5" href="{{ route('testimonial') }}">Testimonial</a></li>
+                                    <li><a class="px-5" href="{{ route('service') }}">Service</a></li>
                                     <li><a class="px-5" href="{{ url ('admin/dashboard/footer') }}">Footer</a></li>
                                 </ul>
-                            </li>
-                            <li><a href="{{ route('pharmacy.home') }}"><i class="fas fa-prescription-bottle"></i>
-                                    Pharmacy</a></li>
+                            </li>             
                             <li><a href="#"><i class="fas fa-users"></i> Manage Doctors</a>
                                 <ul>
-                                    <li>
-                                        <a class="px-5" href="{{ route('doctor.home') }}"> Doctors</a>
-                                        <a class="px-5" href="{{ route('department.home') }}"> Department </a>
-                                        <a class="px-5" href="{{ route('staff.home') }}"> Staff </a>
-                                        <a class="px-5" href="{{ route('chamber.home') }}"> Chamber </a>
-                                    </li>
+                                    <li><a class="px-5" href="{{ route('doctor.home') }}"> Doctors</a></li>
+                                        
+                                      <li><a class="px-5" href="{{ route('department.home') }}"> Department </a></li>
+                                       <li><a class="px-5" href="{{ route('staff.home') }}"> Staff </a></li>
+                                       <li><a class="px-5" href="{{ route('chamber.home') }}"> Chamber </a></li>
+                                
                                 </ul>
                             </li>
                             <li><a href="#"><i class="fas fa-images"></i> Banner</a></li>
