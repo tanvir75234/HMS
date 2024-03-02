@@ -17,6 +17,7 @@ use App\Http\Controllers\PharmacyController;
 use App\Http\Controllers\SocialController;
 use App\Http\Controllers\TopbarController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\Popular_BlogController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\TestimonialController;
@@ -109,6 +110,14 @@ Route::middleware('auth','role:admin')->group(function(){
     Route::get('dashboard/popular/blog/edit/{id}',[Popular_BlogController::class,'edit'])->name('popular-blog.edit');
     Route::post('dashboard/popular/blog/update',[Popular_BlogController::class,'update'])->name('popular-blog.update');
     Route::get('dashboard/popular/blog/softdelete/{id}',[Popular_BlogController::class,'softdelete'])->name('popular-blog.softdelete');
+
+    Route::get('dashboard/contact',[ContactController::class,'index'])->name('contact.home');
+    Route::get('dashboard/contact/add',[ContactController::class,'add'])->name('contact.add');
+    Route::post('dashboard/contact/submit',[ContactController::class,'insert'])->name('contact.submit');
+    Route::get('dashboard/contact/view/{id}',[ContactController::class,'view'])->name('contact.view');
+    Route::get('dashboard/contact/edit/{id}',[ContactController::class,'edit'])->name('contact.edit');
+    Route::post('dashboard/contact/update',[ContactController::class,'update'])->name('contact.update');
+    Route::get('dashboard/contact/softdelete/{id}',[ContactController::class,'softdelete'])->name('contact.softdelete');
 
     Route::get('admin/dashboard/topbar',[TopbarController::class,'edit'])->name('topbar');
     Route::post('admin/dashboard/topbar/update',[TopbarController::class,'update'])->name('topbar.update');

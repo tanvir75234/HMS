@@ -26,7 +26,7 @@
                 <div class="row mb-3">
                   <label class="col-sm-3 col-form-label col_form_label">Service Description<span class="req_star">*</span>:</label>
                   <div class="col-sm-7">             
-                    <input type="text" class="form-control form_control" id="" name="service_description" value="{{ $service->service_description }}">
+                    <textarea type="text" class="form-control form_control" id="" name="service_description">{{ $service->service_description }}</textarea>
                   </div>
                 </div>
             </div>

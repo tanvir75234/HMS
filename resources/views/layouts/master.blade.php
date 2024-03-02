@@ -50,11 +50,12 @@
                         <ul>
                             <li><a href="{{ route('home') }}"><i class="fas fa-home"></i> Dashboard</a></li>
                             <li><a href="{{ route('user.home') }}"><i class="fas fa-user-circle"></i> Users</a></li>
+                            <li><a href="{{ route('appointment.home') }}"><i class="fas fa-user-circle"></i> Appointment</a></li>
                             <li><a href="{{ route('blog.home') }}"><i class="fas fa-user-circle"></i> Blogs</a>
                             <ul>
-                                <li><a class="px-5" href="blog.">Blog Category</a></li>
-                                <li><a class="px-5" href="blog.">Popular Blogs</a></li>
-                                <li><a class="px-5" href="blog.">Comments</a></li>
+                                <li><a class="px-5" href="{{ route('blog.home') }}">Blog Category</a></li>
+                                <li><a class="px-5" href="{{ route('popular-blog.home') }}">Popular Blogs</a></li>
+                                <li><a class="px-5" href="">Comments</a></li>
                             </ul>
                         </li>
                             <li><a href="{{ route('pharmacy.home') }}"><i class="fas fa-prescription-bottle"></i> Pharmacy</a></li>
@@ -78,7 +79,7 @@
                                 </ul>
                             </li>
                             <li><a href="#"><i class="fas fa-images"></i> Banner</a></li>
-                            <li><a href="#"><i class="fas fa-comments"></i> Contact Message</a></li>
+                            <li><a href="{{ route('contact.home') }}"><i class="fas fa-comments"></i> Contact Message</a></li>
                             <li><a href=""><i class="fas fa-globe"></i> Live Site</a></li>
                             <li>
                                 <form action="{{ route('logout') }}" method="POST">
